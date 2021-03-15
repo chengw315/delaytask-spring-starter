@@ -98,11 +98,11 @@ delay-task:
   maxConsumerThreadNum: 64        #消费任务的调度线程池的最大线程数
   consumeInterval: 1000 		  #每个消费任务取延时任务的时间间隔（ms）
   adjustThreadNumInterval: 10000  #消费任务的调度线程池动态调整线程数的时间间隔（ms）
-  tagKey: delay_task:task_tag 					  #Redis Key ——任务tag
-  zsetKey: delay_task:zset_task				      #Redis Key ——任务执行时间排序器
-  hashTaskBodyKey: delay_task:hash_task_body      #Redis Key ——任务body存储器
-  hashRetryCountKey: delay_task:hash_retry_count  #Redis Key ——任务重试次数计数器
-  retryLimitKey: delay_task:task_retry_limit      #Redis Key ——任务重试次数上限
+  tagKey: d_t:Tag{DT} 					  #Redis Key ——任务tag
+  zsetKey: d_t:Zset{DT}				      #Redis Key ——任务执行时间排序器
+  hashTaskBodyKey: d_t:Body{DT}           #Redis Key ——任务body存储器
+  hashRetryCountKey: d_t:Count{DT}        #Redis Key ——任务重试次数计数器
+  retryLimitKey: d_t:Limit{DT}            #Redis Key ——任务重试次数上限
 ```
 
 

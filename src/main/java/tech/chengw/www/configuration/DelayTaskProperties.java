@@ -19,11 +19,11 @@ public class DelayTaskProperties {
     private Integer maxConsumerThreadNum = 64;
     private Long consumeInterval = 1000L;
     private Long adjustThreadNumInterval = 10000L;
-    private String tagKey = "delay_task:task_tag";
-    private String zsetKey = "delay_task:zset_task";
-    private String hashTaskBodyKey = "delay_task:hash_task_body";
-    private String hashRetryCountKey = "delay_task:hash_retry_count";
-    private String retryLimitKey = "delay_task:task_retry_limit";
+    private String tagKey = "d_t:Tag{DT}";
+    private String zsetKey = "d_t:Zset{DT}";
+    private String hashTaskBodyKey = "d_t:Body{DT}";
+    private String hashRetryCountKey = "d_t:Count{DT}";
+    private String retryLimitKey = "d_t:Limit{DT}";
 
     public Boolean getAutoAck() {
         return autoAck;
